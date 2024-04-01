@@ -1,0 +1,128 @@
+body{
+    background-color: #baa1f6;
+}
+
+.head2{
+    margin-right: 180px;
+    margin-top: 20px;
+    display: fixed;
+}
+
+.para2{
+    margin-right: 80px;
+    color:#65605E;
+}
+
+.para4{
+    font-weight: 600;
+    color:#65605E;
+}
+
+.para3{
+    color:#ffffff;
+    font-size: 28px;
+}
+
+.wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.Box1{
+    background-color: #d9d9d9;
+    width: 30%;
+    height: 550px;
+    float: left;
+    margin-left: 19%;
+    margin-top: 50px;
+    border-radius: 15px;
+    
+}
+
+.Box2{
+    background-color: #483c7a;
+    width: 30%;
+    float: right;
+    margin-right: 19%;
+    margin-top: 50px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.input-text {
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .input {
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  /* Optional: Add styles for placeholder text */
+  .input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Optional: Add styles for focused input */
+  .input:focus {
+    border-color: #007bff; /* Change the color as needed */
+    outline: none;
+  }
+
+  .btn1 {
+    background-color: #483c7a;
+    width: 70%;
+    height: auto;
+    color: white;
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/*Social-icon*/
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.img{
+    width: 250px;
+    height: auto;
+    margin-top: 80px;
+}
+
+
+.btn2 {
+    background-color: #d9d9d9;
+    width: 70%;
+    height: auto;
+    color: Black;
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.login{
+    color: blue;
+    margin-right: 90px;
+}

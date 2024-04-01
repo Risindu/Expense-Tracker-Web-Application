@@ -1,0 +1,137 @@
+body{
+    background-color: #baa1f6;
+}
+
+.head4{
+    margin-right: 20px;
+    display: fixed;
+    
+}
+
+.para8{
+    
+    color:#65605E;
+}
+
+.para9{
+    color:#65605E;
+    font-weight: 600;
+}
+
+.wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.Box5{
+    background-color: #d9d9d9;
+    width: 30%;
+    height: 600px;
+    float: left;
+    margin-left: 19%;
+    margin-top: 50px;
+    border-radius: 15px;
+    
+}
+
+.Box6{
+    background-color: #483c7a;
+    width: 30%;
+    float: right;
+    margin-right: 19%;
+    margin-top: 50px;
+    height: 600px;
+    border-radius: 15px;
+}
+
+.input-text {
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .input {
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  /* Optional: Add styles for placeholder text */
+  .input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Optional: Add styles for focused input */
+  .input:focus {
+    border-color: #007bff; /* Change the color as needed */
+    outline: none;
+  }
+
+  .btn5{
+    background-color: #483c7a;
+    width: 70%;
+    height: auto;
+    color: white;
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.btn6{
+    background-color: #baa1f6;
+    width: 70%;
+    height: auto;
+    color: white;
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+
+/*Social-icon*/
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 40px;
+}
+
+.img{
+    width: 250px;
+    height: auto;
+    margin-top: 80px;
+}
+
+.para10{
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+
+}
+
+.btn7 {
+    background-color: #d9d9d9;
+    width: 70%;
+    height: auto;
+    color: Black;
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+}

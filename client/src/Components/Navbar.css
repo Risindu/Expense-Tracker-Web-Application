@@ -1,0 +1,94 @@
+*,*::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html{
+      font-size: 62.5%;
+  }
+  
+  body{
+      font-size: 1.6rem;
+      background-color: none;
+  }
+  
+  li{
+      list-style: none;
+  }
+  
+  a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding-left: 100px;
+  }
+  
+  .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 8vh;
+      background: #886ECC;
+  }
+  
+  .nav_brand{
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+  
+  .nav_menu{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 3rem;
+  }
+  
+  .nav_toggle div{
+      width: 2.5rem;
+      height: 0.2rem;
+      margin: 0.4rem;
+      background: rgb(255, 255, 255);
+  }
+  
+  .nav_toggle{
+      display: block;
+      cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px){
+      .nav_menu{
+          position: fixed;
+          top: 7vh;
+          right: 0;
+          width: 50vw;
+          height: 93vh;
+          background: rgb(0, 28, 73);
+          flex-direction: column;
+          transform: translateX(100%);
+          transition: 0.5s ease-in;
+          margin-top: 7px;
+      }
+  }
+
+  
+  /*nav Actove Class*/
+  
+  .nav_active{
+      transform: translateX(0);
+  }
+
+  .img1{
+    width: 160px;
+    height: 40px;
+  }
+
+  .nav-out{
+    width: 80px;
+    height: 35px;
+    background-color: #4C3C75;
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px
+    ;
+  }
