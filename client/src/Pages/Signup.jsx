@@ -17,7 +17,7 @@ export default function Signup() {
           <input type="text" placeholder="Confirm Password" className="input" /><br/>
         </div>
         <button className="btn1">Sign Up</button>
-        <p className='para4'>or<br/>Sign Up with</p>
+        <p className='para4'>or<br/>Login with</p>
         <div className="social">
           <AiFillGoogleCircle/>
           <AiFillFacebook/>
