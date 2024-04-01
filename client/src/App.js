@@ -5,11 +5,20 @@ import Login from './Pages/Login';
 import Forgot from './Pages/Forgot';
 import Navbar from './Components/Navbar';
 import Transaction from './Pages/Transaction';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Signup/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/forgot" element={<Forgot/>} />
+          <Route path="/transaction" element={<Transaction/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
