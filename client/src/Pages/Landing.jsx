@@ -3,16 +3,25 @@ import './Landing.css'
 import pic1 from "../Assets/pic1.jpg";
 
 export default function Landing() {
+
+  const handleLogin = () => {
+    window.location.href = "/login";
+  }
+
+  const handleSignup = () => {
+    window.location.href = "/signup";
+  }
+
   return (
     <div>
       <h1 className="heading">EXPENSE TRACKING</h1>
       <p className="subheading">Fin-fit is the ultimate tool for managing your money and staying on <br /> top of your expenses.you can quickly input and categorize your<br />expense, set and track a budget</p>
       <div className="container">
         <div className="Btn1">
-          <button className="btn">Sign Up</button>
+          <button className="btn" onClick={handleSignup}>Sign Up</button>
         </div>
         <div className="Btn2">
-          <button className="btn">Login</button>
+          <button className="btn" onClick={handleLogin}>Login</button>
         </div>
       </div>
       <div className="pic">
