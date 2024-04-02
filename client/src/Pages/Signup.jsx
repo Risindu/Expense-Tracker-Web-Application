@@ -5,6 +5,7 @@ import expense from '../Assets/expense.png'
 import { useState } from 'react';
 import axios from 'axios';
 
+
 export default function Signup() {
   const handleLogin = () => {
     window.location.href = "/login";
@@ -23,7 +24,7 @@ export default function Signup() {
     if(password !== confirmPassword){
       alert('passwords do not match')
       return;
-    }else{  
+    }else{ 
     axios.post('http://localhost:5000/signup', {username, email, income, password,confirmPassword})
     .then(result=>{console.log(result)
     window.location.href = "/login";})
