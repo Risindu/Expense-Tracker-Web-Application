@@ -4,6 +4,10 @@ import {AiFillFacebook, AiFillGoogleCircle, AiFillTwitterCircle, AiOutlineWhatsA
 import expense from '../Assets/expense.png'
 
 export default function Signup() {
+
+  const handleSignup = () => {
+    window.location.href = "/Signup";
+  }
   return (
     <div className='wrapper'>
       <div className="Box3">
@@ -24,14 +28,14 @@ export default function Signup() {
           <AiFillTwitterCircle/>
         </div>
         <p className='para6'>I'm not a member!</p>
-        <a href='###' className='signup'><b>Sign Up</b></a>
+        <a href='/Signup' className='signup'><b>Sign Up</b></a>
       </div>
 
       
       <div className="Box4">
         <img src={expense} alt="expense" className='img'/>
         <p className='para7'>Don't have Account?</p>
-        <button className="btn4">Sign Up</button>
+        <button className="btn4" onClick={handleSignup}>Sign Up</button>
       </div>
     </div>
   )
