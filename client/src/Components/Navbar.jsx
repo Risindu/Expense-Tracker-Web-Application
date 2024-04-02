@@ -9,6 +9,10 @@ export default function Navbar() {
         ? setActive("nav_menu nav_active") 
         : setActive("nav_menu");
     };
+
+    const handleLogout = () => {
+        window.location.href = "/login";
+    }
   return (
     <nav className="nav">
         <img src={coin} alt="coin" className='img1'/>
@@ -29,7 +33,7 @@ export default function Navbar() {
             <div className="line3"></div>
         </div>
         <div className="button">
-            <button className='nav-out'>Log Out</button>
+            <button className='nav-out' onClick={handleLogout}>Log Out</button>
         </div>
     </nav>
   )
