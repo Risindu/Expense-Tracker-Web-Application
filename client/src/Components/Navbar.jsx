@@ -23,13 +23,13 @@ export default function Navbar() {
             <img src={coin} alt="coin" className='img1'/>
             <ul className={active}>
                 <li className="nav_item">
-                    <a href="#" className="nav_link">HOME</a>
+                    <a href="/home" className="nav_link">HOME</a>
                 </li>
                 <li className="nav_item">
-                    <a href="#" className="nav_link">TRANSACTION</a>
+                    <a href="/transaction" className="nav_link">TRANSACTION</a>
                 </li>
                 <li className="nav_item">
-                    <a href="#" className="nav_link">CONTACT</a>
+                    <a href="/contact" className="nav_link">CONTACT</a>
                 </li>
             </ul>
             <div onClick={navToggle} className="nav_toggle">

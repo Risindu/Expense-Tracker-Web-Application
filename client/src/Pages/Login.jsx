@@ -8,7 +8,7 @@ import {useNavigate} from 'react-router-dom';
 
 
 
-export default function Signup() {
+export default function Login() {
 
   const handleSignup = () => {
     navigate('/Signup');
@@ -26,6 +26,7 @@ export default function Signup() {
       if(result.data.Status === 'Success Login'){
          // Store username in local storage
          localStorage.setItem('username', result.data.username);
+         localStorage.setItem('user_id', result.data.user_id);
         //Only visitors can access the transaction page
         if(result.data.role === 'user'){
           navigate('/home')

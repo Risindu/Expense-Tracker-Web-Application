@@ -1,0 +1,95 @@
+body{
+    display: flex;
+}
+
+.expense{
+    display: flex;
+    background-color: #D9D9D9;
+    width: 600px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 370px;
+}
+
+.expen{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 10px;
+    
+}
+
+.thing{
+    display: flex;
+    font-size: 20px;
+}
+
+.reas{
+    font-size: 12px;
+    color: #91919F;
+    display: flex;
+    
+}
+
+.detail1{
+    margin-left: 355px;
+    margin-top: 5px;
+}
+.detail2{
+    margin-left: 305px;
+    margin-top: 5px;
+}
+.detail3{
+    margin-left: 320px;
+    margin-top: 5px;
+}
+.detail4{
+    margin-left: 270px;
+    margin-top: 5px;
+}
+
+.price{
+    display: flex;
+    color: red;
+    font-weight: 500;
+    
+}
+
+.time{
+    display: flex;
+    color: #91919F;
+    font-size: 12px;
+}
+
+.delete1{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.delete2{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.delete3{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.delete4{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-// import Dash1 from '../Components/Dash1'
-// import Dash2 from '../Components/Dash2'
+import Dash1 from '../Components/Dash1'
+import Dash2 from '../Components/Dash2'
 import Navbar from '../Components/Navbar'
 import './Home.css'
-// import DList from '../Components/DList'
-// import Latest from '../Components/Latest'
+import DList from '../Components/DList'
+import Latest from '../Components/Latest'
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +12,15 @@ import Moment from 'react-moment';
 
 
 
+
 export default function Home() {
+
+  const [selectedPeriod, setSelectedPeriod] = useState('Today');
+
+  const handleTimePeriodChange = (period) => {
+    setSelectedPeriod(period);
+  };
+
   const date = new Date();
   const navigate = useNavigate();
   const [username, setUserName] = useState('');
@@ -43,20 +51,20 @@ export default function Home() {
       </div>
       <div className="maindash">
         <div className="dashboard1">
-          {/* <Dash1/> */}
+          <Dash1/>
         </div>
         <div className="dashboard2">
-          {/* <Dash2/> */}
+          <Dash2/>
         </div>
       </div>
 
       <div className="late">
-        {/* <Latest/> */}
+        <Latest onTimePeriodChange={handleTimePeriodChange}/>
       </div>
-      {/* <DList/> */}
-
-      
-    </div>
+      <div className="list">
+        <DList selectedPeriod={selectedPeriod} />
+      </div>
+      </div>
 
   )
 }

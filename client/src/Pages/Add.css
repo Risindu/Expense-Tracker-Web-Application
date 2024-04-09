@@ -1,0 +1,77 @@
+.addtrans{
+    display: flex;
+    margin-left: 45%;
+    margin-top: 10%;
+    color: black;
+    width: 500px;
+}
+
+.addbox{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    margin-left: 40%;
+    margin-top: 5%;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+.detail{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    background-color: #8F8A88;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.selection{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: #8F8A88;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.descri{
+    width: 300px;
+    height: 80px;
+    margin-bottom: 20px;
+    background-color: #8F8A88;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.select{
+    display: flex;
+    justify-content: center;
+    gap: 85px;
+    font-weight: bold;
+    color: #373433;
+    margin-left: 85px;
+}
+
+.addbtn{
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.addbutton{
+    width: 250px;
+    height: 40px;
+    background-color: #4C3C75;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+}

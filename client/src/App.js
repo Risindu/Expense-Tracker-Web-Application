@@ -5,6 +5,7 @@ import Login from './Pages/Login';
 import Forgot from './Pages/Forgot';
 import Transaction from './Pages/Transaction';
 import Home from './Pages/Home';
+import Add from './Pages/Add';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/forgot" element={<Forgot/>} />
           <Route path="/home" element={<Home/>} />
+          <Route path="/add" element={<Add/>} />
           <Route path="/transaction" element={<Transaction/>} />
         </Routes>
       </BrowserRouter>

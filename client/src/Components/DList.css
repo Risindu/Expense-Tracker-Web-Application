@@ -1,0 +1,49 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .expense {
+    display: flex;
+    background-color: #d9d9d9;
+    width: 100%; /* Adjust width to fit within available space */
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .expen {
+    width: 40px;
+    height: 40px;
+    padding: 5px 10px;
+  }
+  
+  .thing {
+    font-size: 20px;
+  }
+  
+  .reas {
+    font-size: 12px;
+    width: 150px;
+    color: #91919f;
+  }
+  
+  .details {
+    margin-left: 700px;
+    margin-right: 10px;
+
+  }
+  
+  .price {
+    color: red;
+    font-weight: 500;
+  }
+  
+  .time {
+    color: #91919f;
+    font-size: 12px;
+  }
+  

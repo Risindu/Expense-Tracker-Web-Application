@@ -1,0 +1,41 @@
+.lateTrans {
+    justify-content: space-between;
+    margin: 0 400px -50px;
+  }
+  
+  .latest {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px;
+  }
+  
+  .all {
+    color: black;
+    margin-left: 20px;
+  }
+  
+  .arrow {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .setbutton {
+    display: flex;
+    margin-top: 30px;
+  }
+  
+  .timebutton {
+    width: 90px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgba(52, 50, 211, 0.719);
+    color: white;
+    font-weight: 800;
+    margin-left: 20px;
+  }
+  
+  /* Style for active state */
+  .timebutton.active {
+    background-color: #25242475;
+  }
+  
