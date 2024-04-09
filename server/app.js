@@ -1,16 +1,47 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const User = require('./models/Users');
+const cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cookieParser());
+app.use(cors({
+    origin: ['http://localhost:3000'],
+    methods: ['GET', 'POST'],
+    credentials: true
+}
+));
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://admin-risindu:risindu123@expensetracker.eylgenx.mongodb.net/ExpenseTracker?retryWrites=true&w=majority');
+
+const verifyUser = (req, res, next) => {
+    const token = req.cookies.token;
+    if(!token){
+        return res.json("You need to Login");
+    }else{
+        jwt.verify(token, "jwt-secret-key", (err, decoded) => {
+            if(err){
+                return res.json("Invalid Token");
+            }else{
+               if(decoded.role === "user"){
+                   next();
+                }else{
+                    return res.json("You are not authorized");
+                }   
+            }
+        });
+    }
+}
+
+app.get('/transaction', verifyUser,(req, res) => {
+    res.json({Status:"Success"});
+});
+
 
 app.listen(5000, () => {
     console.log('Server has started on port 5000');
@@ -29,7 +60,7 @@ app.post('/signup', (req, res) => {
         password: hashedPassword
     })
     .then((user) => {
-        res.json(user);
+        return res.json({Status:"Success Signup"});
     })
     .catch((err) => {
         res.status(400).json(err);
@@ -44,9 +75,12 @@ app.post('/login', (req, res) => {
         .then((user) => {
             if(user){
                 if(bcrypt.compareSync(password, user.password)){
-                    res.json("Success Login");
+                    const token = jwt.sign({email:user.email, role:user.role},"jwt-secret-key",{expiresIn: "1d"});
+                    res.cookie('token', token);
+                    return res.json({Status: "Success Login",role:user.role, username:user.username});
+
                 }else{
-                    res.json("Password is incorrect");
+                    return res.json("Password is incorrect");
                 }
             }
         })

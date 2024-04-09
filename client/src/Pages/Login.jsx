@@ -4,25 +4,37 @@ import {AiFillFacebook, AiFillGoogleCircle, AiFillTwitterCircle, AiOutlineWhatsA
 import expense from '../Assets/expense.png'
 import { useState } from 'react';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
+
 
 
 export default function Signup() {
 
   const handleSignup = () => {
-    window.location.href = "/Signup";
+    navigate('/Signup');
   }
 
  const[email,setEmail] = useState('');
  const[password,setPassword] = useState('');
+ const navigate = useNavigate();
  
+  axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('http://localhost:5000/login', {email, password})
     .then(result=>{console.log(result)
-      if(result.data === 'Success Login'){
-        window.location.href = "/Transaction";
+      if(result.data.Status === 'Success Login'){
+         // Store username in local storage
+         localStorage.setItem('username', result.data.username);
+        //Only visitors can access the transaction page
+        if(result.data.role === 'user'){
+          navigate('/Transaction')
+        }else{
+          //Only admin can access the admin page (Not implemented yet)
+          navigate('/')
+        }
       }else{
-        alert(result.data)
+        alert("Can't Login")
       }
     })
     .catch(err=>{console.log(err)})
@@ -35,10 +47,10 @@ export default function Signup() {
         <p className='para5'>Login to your Account</p>
         <form onSubmit={handleSubmit}>
         <div className="input-text">
-          <input type="text" placeholder="Email" className="input" onChange={(e)=>setEmail(e.target.value)}/><br/>
-          <input type="password" placeholder="Password" className="input" onChange={(e)=>setPassword(e.target.value)}/><br/>
-          <input type="checkbox" className="checkbox" /><span className='span'>Remember me</span><br/><br/>
-          <a href='###' className='forgot'><b>Forgot Password</b></a>
+          <input type="text" id ="email" placeholder="Email" className="input" onChange={(e)=>setEmail(e.target.value)}/><br/>
+          <input type="password"  id ="password" placeholder="Password" className="input" onChange={(e)=>setPassword(e.target.value)}/><br/>
+          <input type="checkbox" id ="checkbox" className="checkbox" /><span className='span'>Remember me</span><br/><br/>
+          <a href='/forgot' id ="forgot" className='forgot'><b>Forgot Password</b></a>
         </div>
         <button className="btn3">Login</button>
         </form>

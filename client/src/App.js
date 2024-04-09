@@ -3,7 +3,6 @@ import Landing from './Pages/Landing';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Forgot from './Pages/Forgot';
-import Navbar from './Components/Navbar';
 import Transaction from './Pages/Transaction';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 

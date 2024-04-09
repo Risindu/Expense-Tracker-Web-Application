@@ -4,11 +4,12 @@ import {AiFillFacebook, AiFillGoogleCircle, AiFillTwitterCircle, AiOutlineWhatsA
 import expense from '../Assets/expense.png'
 import { useState } from 'react';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 
 export default function Signup() {
   const handleLogin = () => {
-    window.location.href = "/login";
+    navigate('/login');
   }
 
   //create use state for the form data
@@ -17,17 +18,18 @@ export default function Signup() {
   const [income, setIncome] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate();
 
   //create a function to handle the form submission
   const handleSubmit = (e) => {
       e.preventDefault();
     if(password !== confirmPassword){
-      alert('passwords do not match')
-      return;
+      alert('passwords do not match');
     }else{ 
     axios.post('http://localhost:5000/signup', {username, email, income, password,confirmPassword})
     .then(result=>{console.log(result)
-    window.location.href = "/login";})
+    if(result.data.Status === 'Success Signup'){
+      navigate('/login')}})
     .catch(err=>{console.log(err)})
     }
   }
@@ -55,7 +57,7 @@ export default function Signup() {
           <AiFillTwitterCircle/>
         </div>
         <p className='para4'>I'm already a member!</p>
-        <a href='###' className='login'><b>Login</b></a>
+        <a href='/login' className='login'><b>Login</b></a>
       </div>
 
       
