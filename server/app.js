@@ -38,7 +38,7 @@ const verifyUser = (req, res, next) => {
     }
 }
 
-app.get('/transaction', verifyUser,(req, res) => {
+app.get('/home', verifyUser,(req, res) => {
     res.json({Status:"Success"});
 });
 

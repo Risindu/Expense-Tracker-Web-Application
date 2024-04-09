@@ -28,7 +28,7 @@ export default function Signup() {
          localStorage.setItem('username', result.data.username);
         //Only visitors can access the transaction page
         if(result.data.role === 'user'){
-          navigate('/Transaction')
+          navigate('/home')
         }else{
           //Only admin can access the admin page (Not implemented yet)
           navigate('/')

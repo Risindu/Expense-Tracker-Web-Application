@@ -1,0 +1,36 @@
+.home{
+    display: fixed;
+}
+
+.name1{
+    float: right;
+    margin-top: 50px;
+    margin-right: 250px;
+    
+}
+
+.date1{
+    float: left;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+.maindash{
+    display: flex;
+    margin-top: 100px;
+
+}
+
+.dashboard1{
+    display: flex;
+    margin-left: 220px;
+}
+
+.dashboard2{
+    display: flex;
+}
+
+.late{
+    margin-top: 50px;
+    margin-left: 50px;
+}
