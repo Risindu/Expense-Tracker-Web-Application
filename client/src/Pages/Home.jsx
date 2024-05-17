@@ -9,6 +9,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Moment from 'react-moment';
+import Greeting from '../Components/Greeting'
 
 
 
@@ -24,6 +25,24 @@ export default function Home() {
   const date = new Date();
   const navigate = useNavigate();
   const [username, setUserName] = useState('');
+
+  //for greeting message
+  const [greeting, setGreeting] = useState('');
+  const updateGreeting = () => {
+    const hour = date.getHours();
+    if (hour < 12) {
+      setGreeting('Good Morning');
+    } else if (hour < 17) {
+      setGreeting('Good Afternoon');
+    } else if (hour < 21) {
+      setGreeting('Good Evening');
+    } else {
+      setGreeting('Good Night');
+    }
+  };
+
+
+
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
@@ -47,7 +66,7 @@ export default function Home() {
       <Navbar/>
       <div className='dash'>
         <h4 className='date1'><Moment format="MMMM Do YYYY">{date}</Moment></h4>
-        <h4 className="name1">Good Morning,<br/>{username}</h4>
+        <Greeting username = {username}/>
       </div>
       <div className="maindash">
         <div className="dashboard1">

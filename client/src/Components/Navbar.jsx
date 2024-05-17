@@ -32,11 +32,7 @@ export default function Navbar() {
                     <a href="/contact" className="nav_link">CONTACT</a>
                 </li>
             </ul>
-            <div onClick={navToggle} className="nav_toggle">
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
-            </div>
+
             <div className="button">
                 <button className='nav-out' onClick={handleLogout}>Log Out</button>
             </div>

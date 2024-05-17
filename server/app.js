@@ -70,6 +70,26 @@ app.get('/transactions', verifyUser, async (req, res) => {
     }
 });
 
+// New endpoint to fetch transactions for today (For transactions page)
+app.get('/transactions/today', verifyUser, async (req, res) => {
+    try {
+      const user_id = req.query.user_id;
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // Set time to the beginning of the day
+  
+      // Fetch user's transactions for today using a date filter
+      const transactions = await Transaction.find({
+        user_id: user_id,
+        date: { $gte: today } // Filter by date (greater than or equal to today)
+      });
+  
+      res.json({ transactions });
+    } catch (error) {
+      console.error('Error fetching transactions:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+
 app.get('/expenses', verifyUser, async (req, res) => {
 
     function getDateFilter(timePeriod) {
@@ -207,3 +227,20 @@ app.post('/add', (req, res) => {
     });
 });
 
+//Fetch transactions data for today {Transactions Page API Endpoint}
+
+app.get('/transactions', verifyUser, async (req, res) => {
+    try {
+        const user_id = req.query.user_id;
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Set time to the beginning of the day
+
+        // Fetch user's transactions for today
+        const transactions = await Transaction.find({ user_id: user_id, date: { $gte: today } });
+
+        res.json({ transactions });
+    } catch (error) {
+        console.error('Error fetching transactions:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});

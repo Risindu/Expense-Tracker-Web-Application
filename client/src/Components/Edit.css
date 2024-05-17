@@ -1,95 +1,51 @@
-body{
+.edit-container {
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .edit {
     display: flex;
-}
-
-.expense{
+    justify-content: space-between;
+  }
+  
+  .edit-details {
     display: flex;
-    background-color: #D9D9D9;
-    width: 600px;
-    height: 50px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 370px;
-}
-
-.expen{
+    flex-direction: column;
+  }
+  
+  .edit-category,
+  .edit-description {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .edit-icons {
     display: flex;
-    width: 40px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 15px;
-    margin-right: 10px;
-    
-}
-
-.thing{
-    display: flex;
-    font-size: 20px;
-}
-
-.reas{
-    font-size: 12px;
-    color: #91919F;
-    display: flex;
-    
-}
-
-.detail1{
-    margin-left: 355px;
-    margin-top: 5px;
-}
-.detail2{
-    margin-left: 305px;
-    margin-top: 5px;
-}
-.detail3{
-    margin-left: 320px;
-    margin-top: 5px;
-}
-.detail4{
-    margin-left: 270px;
-    margin-top: 5px;
-}
-
-.price{
-    display: flex;
-    color: red;
-    font-weight: 500;
-    
-}
-
-.time{
-    display: flex;
-    color: #91919F;
-    font-size: 12px;
-}
-
-.delete1{
-    display: flex;
-    width: 30px;
+    align-items: center;
+  }
+  
+  .edit-button,
+  .delete-button {
+    width: 70px;
     height: 30px;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.delete2{
-    display: flex;
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-}
-
-.delete3{
-    display: flex;
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-}
-
-.delete4{
-    display: flex;
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
+    background-color: #483c7a;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
     margin-left: 10px;
-}
+  }
+  
+  .edit-button:hover,
+  .delete-button:hover {
+    background-color: #3a2f5c;
+  }
+  
+  .edit-amount {
+    color: red;
+    font-weight: bold;
+  }
+  

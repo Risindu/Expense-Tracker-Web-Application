@@ -6,6 +6,7 @@ import Forgot from './Pages/Forgot';
 import Transaction from './Pages/Transaction';
 import Home from './Pages/Home';
 import Add from './Pages/Add';
+import ContactUs from "./Pages/Contact";
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/home" element={<Home/>} />
           <Route path="/add" element={<Add/>} />
           <Route path="/transaction" element={<Transaction/>} />
+          <Route path="/contact" element={<ContactUs/>}/>
         </Routes>
       </BrowserRouter>
     </div>
